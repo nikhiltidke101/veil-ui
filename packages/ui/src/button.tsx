@@ -12,6 +12,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return <Comp className={className} ref={ref} {...props} />;
   }
 );
+
 Button.displayName = "Button";
 
 export { Button };
