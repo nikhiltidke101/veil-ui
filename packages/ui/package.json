@@ -1,5 +1,5 @@
 {
-  "name": "@veil/ui",
+  "name": "ui",
   "version": "0.0.0",
   "sideEffects": false,
   "license": "MIT",
