@@ -1,18 +1,20 @@
-import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
+"use client";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  asChild?: boolean;
+import { ReactNode } from "react";
+
+interface ButtonProps {
+  children: ReactNode;
+  className?: string;
+  appName: string;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
-    return <Comp className={className} ref={ref} {...props} />;
-  }
-);
-
-Button.displayName = "Button";
-
-export { Button };
+export const Button = ({ children, className, appName }: ButtonProps) => {
+  return (
+    <button
+      className={className}
+      onClick={() => alert(`Hello from your ${appName} app!`)}
+    >
+      {children}
+    </button>
+  );
+};
