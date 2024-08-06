@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Button } from "@repo/ui/button";
-import { Button as ButtonUI } from "@repo/ui-shared/button";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -50,9 +49,6 @@ export default function Home() {
         <Button appName="web" className={styles.secondary}>
           Open alert
         </Button>
-        <ButtonUI appName="web" className={styles.secondary}>
-          Open alert 2
-        </ButtonUI>
       </main>
       <footer className={styles.footer}>
         <a
